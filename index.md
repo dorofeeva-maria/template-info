@@ -4,4 +4,4 @@
 
 ## (root)
 
-- [[example|Example note]] — TL;DR — one paragraph. This is an example note showing the frontmatter and a TL;DR-first body.
+- [[overview|Overview]] — TL;DR — what this knowledge base covers, in a paragraph. Replace with a real synthesis and

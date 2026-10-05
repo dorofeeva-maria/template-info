@@ -1,9 +1,13 @@
-# Module instructions
+# Module
 
-A self-contained **knowledge module**. It knows nothing about any ecosystem and can be used on
-its own. Notes are markdown with YAML frontmatter (`title`, `type`, `updated`); links are
-intra-module only. Regenerate `index.md` with `kc index` (if the ecosystem's `kc` is available).
+Replace this with a description of what this knowledge base holds and any conventions for
+working in it.
 
-## This module's own rules
+Structure:
+- `overview.md` — the landing synthesis.
+- `entities/` — pages about specific things (a person, a place, a work, an object).
+- `concepts/` — ideas, techniques, recurring themes.
+- `summaries/` — one page per source.
 
-Describe this module's purpose, structure, and any conventions here, then delete this note.
+Notes are markdown with YAML frontmatter (`title`, `type`, `updated`), one topic per note;
+links point to other notes in this repo by filename.
