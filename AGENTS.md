@@ -33,6 +33,16 @@ A personal knowledge base. The human curates; an assistant helps capture and org
 
 - **Links** point to other notes in this repo by filename, in double brackets: `[[note-name]]`.
   Link the first mention of another note. Links never leave this repo.
-- **`index.md`** is an auto-generated listing of the notes — regenerate it after adding or
-  removing notes; don't hand-write prose into it.
+- **`index.md`** is an auto-generated listing of the notes — after adding, renaming or
+  removing notes run `python tools/notes.py index`; don't hand-write prose into it.
 - **`log.md`** — one line per meaningful change, newest at the bottom: `YYYY-MM-DD — what changed`.
+
+## Tools
+
+- `python tools/notes.py check -v` — lists problems: missing frontmatter, broken links, stale
+  index. Run it before committing; it changes nothing.
+- `python tools/notes.py index` — rebuilds `index.md`.
+- `python tools/notes.py compact-log --keep 50` — when `log.md` grows too long: moves older
+  entries to `log.archive.md`. Then rewrite the newly archived block into a short summary that
+  keeps **every decision, every changed decision and the current state**, and drops day-to-day
+  narrative. Recent entries stay as they are.

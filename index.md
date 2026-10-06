@@ -4,4 +4,4 @@
 
 ## (root)
 
-- [[overview|Overview]] — TL;DR — what this knowledge base covers, in a paragraph. Replace with a real synthesis and
+- [[overview|Overview]] — what this knowledge base covers, in a paragraph. Replace with a real synthesis and
