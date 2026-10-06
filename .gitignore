@@ -1,3 +1,6 @@
 .DS_Store
 *.swp
 __pycache__/
+
+# Large source files (over 20 MB) stay on this machine only
+media/large/

@@ -1,6 +1,8 @@
 # Module
 
 > Replace this heading and the line below with this knowledge base's name and what it holds.
+> Also state the language notes are written in, and where source files go if not `media/`
+> (or that source files are not kept).
 
 A personal knowledge base. The human curates; an assistant helps capture and organize.
 
@@ -25,6 +27,9 @@ A personal knowledge base. The human curates; an assistant helps capture and org
   - `entities/` — specific things (a person, place, work, object).
   - `concepts/` — ideas, techniques, recurring themes.
   - `summaries/` — one note per source.
+  - `media/` — source files (PDFs, images, audio, video) the notes are based on, with a
+    transcript beside each audio/video file. Link to them from the notes. Files over 20 MB go
+    to `media/large/`, which is not committed; don't link to those.
 
 - **Links** point to other notes in this repo by filename, in double brackets: `[[note-name]]`.
   Link the first mention of another note. Links never leave this repo.
