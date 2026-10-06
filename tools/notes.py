@@ -19,6 +19,7 @@ REQUIRED = ("title", "type", "updated")
 SKIP_DIRS = {".git", ".obsidian", ".claude", ".cursor", "node_modules", "__pycache__", "tools", "media"}
 NOT_NOTES = {"index.md", "log.md", "log.archive.md", "README.md", "AGENTS.md", "CLAUDE.md"}
 INDEX_HEADER = "<!-- auto-generated index — regenerate after adding/removing notes; do not edit by hand -->"
+TAG = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ENTRY = re.compile(r"^\d{4}-\d{2}-\d{2}\b")
 
 
@@ -123,6 +124,11 @@ def cmd_check(root=ROOT, verbose=False):
                     problems.append((r, f"frontmatter: missing {k}"))
             if fm.get("updated") and not re.match(r"^\d{4}-\d{2}-\d{2}$", fm["updated"]):
                 problems.append((r, f"frontmatter: bad updated {fm['updated']!r}"))
+            tags = fm.get("tags")
+            if tags:
+                items = [x.strip().strip("\"'") for x in tags.strip("[]").split(",") if x.strip()]
+                if not tags.startswith("[") or any(not TAG.match(x) for x in items):
+                    problems.append((r, f"frontmatter: tags must be a [kebab-case, list], got {tags!r}"))
         body = re.sub(r"```.*?```", "", text, flags=re.S)
         d = str(PurePosixPath(r).parent)
         for m in LINK.finditer(body):

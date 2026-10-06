@@ -17,6 +17,7 @@ A personal knowledge base. The human curates; an assistant helps capture and org
   title: Human-readable title
   type: entity | concept | summary | overview | note
   updated: YYYY-MM-DD
+  tags: [kebab-case, words]   # optional
   ---
 
   TL;DR — one paragraph, then the details.
@@ -31,6 +32,10 @@ A personal knowledge base. The human curates; an assistant helps capture and org
     transcript beside each audio/video file. Link to them from the notes. Files over 20 MB go
     to `media/large/`, which is not committed; don't link to those.
 
+- **Tags** (optional) name cross-cutting things a note is about — people, places, tools,
+  levels — as kebab-case words. Don't repeat the folder or the type. Tag personal material
+  (health, family, finances, other people's private messages) `private`, and never copy its
+  details into other notes outside this repo — mention it only in general terms.
 - **Links** point to other notes in this repo by filename, in double brackets: `[[note-name]]`.
   Link the first mention of another note. Links never leave this repo.
 - **`index.md`** is an auto-generated listing of the notes — after adding, renaming or
