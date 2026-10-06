@@ -37,8 +37,8 @@ A personal knowledge base. The human curates; an assistant helps capture and org
   - `analyses/` — your own reasoning over several notes: an `analysis`, or a `comparison` of
     options.
   - `media/` — source files (PDFs, images, audio, video) the notes are based on, with a
-    transcript beside each audio/video file. Link to them from the notes. Files over 20 MB go
-    to `media/large/`, which is not committed; don't link to those.
+    transcript beside each audio/video file. Link to them from the notes. A file over 20 MB is
+    not kept: distil it into notes (transcript / summary) and delete the original.
 
 - **Tags** (optional) name cross-cutting things a note is about — people, places, tools,
   levels — as kebab-case words. Don't repeat the folder or the type. Tag personal material
