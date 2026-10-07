@@ -46,14 +46,16 @@ A personal knowledge base. The human curates; an assistant helps capture and org
 - **Tags** (optional) name cross-cutting things a note is about — people, places, tools,
   levels — as kebab-case words. Don't repeat the folder or the type. Tag personal material
   (health, family, finances, other people's private messages) `private`, and never copy its
-  details anywhere outside this repo — mention it only in general terms.
+  details anywhere outside this repo — mention it only in general terms. Personal material
+  belongs only in a repo whose remote is private; if this repo is public, don't write it here.
 - **Links** are relative markdown links to other files in this repo:
   `[text](../concepts/note-name.md)`. Link the first mention of another note, and connect every
   new note to one or two existing ones so it is not orphaned. Links never leave this repo.
 - **`index.md`** is generated — after adding, renaming or removing notes run
   `python tools/notes.py index`; don't edit it by hand.
 - **`log.md`** — one line per meaningful change, newest at the bottom: `YYYY-MM-DD — what changed`.
-- **Commit** after each meaningful change, with a message saying what changed.
+- **Commit** after each meaningful change, with a message saying what changed, in this repo's
+  language. If you work here on more than one device, pull before you start and push when done.
 
 ## Processes
 
