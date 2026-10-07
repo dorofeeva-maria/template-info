@@ -1,22 +1,24 @@
 # Module
 
 > Replace this heading and the line below with this knowledge base's name and what it holds.
-> Also state the language notes are written in, and where source files go if not `media/`
-> (or that source files are not kept).
+> Also state the language notes are written in.
 
 A personal knowledge base. The human curates; an assistant helps capture and organize.
 
 ## How to work here
 
-- **Read `memory.md` first.** It holds standing facts and corrections for working in this
-  knowledge base. When the human corrects you or states a lasting preference about this
-  subject, add it there (one bullet: the fact, then why).
+- **Write as you go.** When something worth keeping comes up in the conversation, write it into
+  a note right away — don't wait to be asked or for the end of the session.
 - **One topic per note.** If something has a name you'd search for, it gets its own note.
   Prefer many small, linked notes over a few big ones. After a large addition, look for
   clusters that deserve their own notes and offer to split them.
+- **Update, don't duplicate.** Prefer updating an existing note (bump `updated`). If new
+  information contradicts a note, show both versions with dates and ask which holds; keep the
+  old value with its period ("until 2026-10: …") when history matters.
 - **File names:** lowercase ASCII kebab-case (`harbor-cafe.md`). A title in another script is
   transliterated in the file name; the original goes in `title`.
-- **Every note starts with frontmatter and a one-paragraph TL;DR:**
+- **Every note starts with frontmatter and a one-paragraph TL;DR** (the first paragraph goes
+  into the index, so keep it to one line of prose):
 
   ```
   ---
@@ -37,20 +39,27 @@ A personal knowledge base. The human curates; an assistant helps capture and org
   - `analyses/` — your own reasoning over several notes: an `analysis`, or a `comparison` of
     options.
   - `media/` — source files (PDFs, images, audio, video) the notes are based on, with a
-    transcript beside each audio/video file. Link to them from the notes. Files over 20 MB go
-    to `media/large/`, which is not committed; don't link to those.
+    transcript beside each audio/video file. A file to keep is given to you as a path: copy it
+    here and link it from the note. Files too large for git or meant to stay on this device:
+    add them to `.gitignore` and don't link to them.
 
 - **Tags** (optional) name cross-cutting things a note is about — people, places, tools,
   levels — as kebab-case words. Don't repeat the folder or the type. Tag personal material
   (health, family, finances, other people's private messages) `private`, and never copy its
-  details into other notes outside this repo — mention it only in general terms.
-- **Links** point to other notes in this repo by relative path, in double brackets:
-  `[[../concepts/note-name|text]]` (a bare `[[note-name]]` works when the name is unique).
-  Link the first mention of another note, and connect every new note to one or two existing
-  ones so it is not orphaned. Links never leave this repo.
-- **`index.md`** is an auto-generated listing of the notes — after adding, renaming or
-  removing notes run `python tools/notes.py index`; don't hand-write prose into it.
+  details anywhere outside this repo — mention it only in general terms.
+- **Links** are relative markdown links to other files in this repo:
+  `[text](../concepts/note-name.md)`. Link the first mention of another note, and connect every
+  new note to one or two existing ones so it is not orphaned. Links never leave this repo.
+- **`index.md`** is generated — after adding, renaming or removing notes run
+  `python tools/notes.py index`; don't edit it by hand.
 - **`log.md`** — one line per meaningful change, newest at the bottom: `YYYY-MM-DD — what changed`.
+- **Commit** after each meaningful change, with a message saying what changed.
+
+## Processes
+
+Repeatable procedures of this knowledge base are Claude Code skills in
+`.claude/skills/<name>/SKILL.md` (frontmatter `name`, `description`). When you do the same
+multi-step procedure here by hand for the third time, propose turning it into one.
 
 ## Tools
 

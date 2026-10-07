@@ -2,5 +2,4 @@
 *.swp
 __pycache__/
 
-# Large source files (over 20 MB) stay on this machine only
-media/large/
+# Files that stay on this device only (large media, recordings): list them here.
