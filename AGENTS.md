@@ -7,6 +7,8 @@ A personal knowledge base. The human curates; an assistant helps capture and org
 
 ## How to work here
 
+- **Rules the human adds** for this knowledge base go into *Module rules* below, one bullet each
+  with the reason — not into the general rules here, and not into Processes.
 - **Write as you go.** When something worth keeping comes up in the conversation, write it into
   a note right away — don't wait to be asked or for the end of the session.
 - **One topic per note.** If something has a name you'd search for, it gets its own note.
@@ -56,6 +58,11 @@ A personal knowledge base. The human curates; an assistant helps capture and org
 - **`log.md`** — one line per meaningful change, newest at the bottom: `YYYY-MM-DD — what changed`.
 - **Commit** after each meaningful change, with a message saying what changed, in this repo's
   language. If you work here on more than one device, pull before you start and push when done.
+
+## Module rules
+
+> Replace with the rules specific to this knowledge base (what to evaluate first, how the human
+> wants material handled), one bullet each with a short **Why:** — or delete this section.
 
 ## Processes
 
